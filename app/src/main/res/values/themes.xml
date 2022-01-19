@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Theme.DriveAllNight" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/weldon_blue</item>
+        <item name="colorPrimaryVariant">@color/storm_cloud</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/sunset_orange</item>
+        <item name="colorSecondaryVariant">@color/red_crayola</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Customize your theme here. -->
+        <item name="background">@color/beige</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="colorPrimary">@color/weldon_blue</item>
+        <item name="colorPrimaryDark">@color/storm_cloud</item>
+        <item name="colorAccent">@color/sunset_orange</item>
+        <item name="android:statusBarColor">@color/red_crayola</item>
+    </style>
+
+</resources>
