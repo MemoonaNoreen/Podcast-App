@@ -30,7 +30,7 @@
         <item name="android:statusBarColor">@color/accentDark</item>
     </style>
 
-    <style name="SignInTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="WithoutActionBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>

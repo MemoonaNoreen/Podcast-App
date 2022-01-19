@@ -4,4 +4,6 @@
     <string name="name">User Name</string>
     <string name="password">Password</string>
     <string name="forget">Forget Password?</string>
+    <string name="signup">Sign Up</string>
+    <string name="start">Get Started,</string>
 </resources>
