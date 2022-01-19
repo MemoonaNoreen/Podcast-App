@@ -1,8 +1,10 @@
-package com.example.driveallnight;
+package com.example.driveallnight.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.driveallnight.R;
 
 public class MainActivity extends AppCompatActivity {
 
