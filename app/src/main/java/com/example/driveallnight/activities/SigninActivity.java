@@ -26,8 +26,6 @@ public class SigninActivity extends AppCompatActivity
 
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
-    private DatabaseReference userReference;
-    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -121,7 +119,7 @@ public class SigninActivity extends AppCompatActivity
                     Snackbar.make(binding.getRoot(), e.getMessage(), Snackbar.LENGTH_SHORT).show();
                 });
     }
-    
+
     private void startMainActivity()
     {
         Intent intent = new Intent(context, MainActivity.class);
