@@ -9,4 +9,10 @@
     <string name="welcome">Welcome,</string>
     <string name="contd">Sign in to Continue!</string>
     <string name="new_member">I am a new member, </string>
+    <string name="listen">Listen</string>
+    <string name="drive">Drive All Night</string>
+    <string name="tour">Tour All Night</string>
+    <string name="shutup">Never Shut Up</string>
+    <string name="plus">Drive All Night Plus</string>
+    <string name="wills"><![CDATA[Wills & Wants]]></string>
 </resources>

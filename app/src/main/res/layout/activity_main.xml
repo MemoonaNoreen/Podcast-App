@@ -1,18 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtListen"
+        android:text="@string/listen"
+        android:gravity="center_horizontal"
+        android:textAllCaps="true"
+        android:layout_marginTop="20dp"
+        android:textSize="30dp"
+        android:contentDescription="@string/listen"
+        android:textColor="@color/primaryDark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/txtListen"
+        android:background="@drawable/bg_gradient"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"/>
+
+    <RelativeLayout
+        android:id="@+id/ly_podcasts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtListen"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:id="@+id/ly_drive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgDriveAllNight"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/driveallnight" />
+
+            <TextView
+                android:id="@+id/txtDriveAllNight"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drive"
+                android:contentDescription="@string/drive"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_shutup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/ly_drive">
+
+            <ImageView
+                android:id="@+id/imgNeverShutup"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/nevershutup" />
+
+            <TextView
+                android:id="@+id/txtNeverShutup"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shutup"
+                android:contentDescription="@string/shutup"/>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/ly_tour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgTourAllNight"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/tourallnight" />
+
+            <TextView
+                android:id="@+id/txtTourAllNight"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgTourAllNight"
+                android:gravity="left"
+                android:text="@string/tour"
+                android:contentDescription="@string/tour"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ly_tour"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgDriveAllNightPlus"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/driveallnight" />
+
+            <TextView
+                android:id="@+id/txtDriveAllNightPlus"
+                style="@style/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgTourAllNight"
+                android:contentDescription="@string/plus"
+                android:gravity="left"
+                android:text="@string/plus" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnWillsNwants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ly_podcasts"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="@color/accent"
+        android:elevation="10dp"
+        android:padding="20dp"
+        android:text="@string/wills"
+        android:contentDescription="@string/wills"
+        android:textColor="@color/beige"
+        android:textSize="18dp" />
+
+</RelativeLayout>
