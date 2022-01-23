@@ -31,7 +31,9 @@ public class SignupActivity extends AppCompatActivity
 {
     private static final String TAG = "SignupActivity";
     private Context context = SignupActivity.this;
+
     private ActivitySignupBinding binding;
+
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     private DatabaseReference userReference;
