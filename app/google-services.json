@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "668690605730",
+    "firebase_url": "https://drive-all-night-default-rtdb.firebaseio.com",
+    "project_id": "drive-all-night",
+    "storage_bucket": "drive-all-night.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668690605730:android:10c2360f3031f1ff1759fb",
+        "android_client_info": {
+          "package_name": "com.example.driveallnight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668690605730-sr5icfb6r1ihoga4b40hh83n2iclfj5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAotJYdpczzG_5mzrz9XwoFiW1wKOOmL3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668690605730-sr5icfb6r1ihoga4b40hh83n2iclfj5r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "668690605730-sp5vqbmbgtemdu6pea4a4ruqc1sstmpn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.DriveAllNight.DriveAllNight"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

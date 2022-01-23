@@ -6,4 +6,7 @@
     <string name="forget">Forget Password?</string>
     <string name="signup">Sign Up</string>
     <string name="start">Get Started,</string>
+    <string name="welcome">Welcome,</string>
+    <string name="contd">Sign in to Continue!</string>
+    <string name="new_member">I am a new member, </string>
 </resources>
