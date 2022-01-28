@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/drawable/bg_border.xml" value="0.2534246575342466" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/drawable/bg_gradient.xml" value="0.24166666666666667" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/drawable/button_background.xml" value="0.2846153846153846" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/drawable/ic_person.xml" value="0.2846153846153846" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/drawable/splash_background.xml" value="1.1214285714285714" />
+        <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/layout/activity_episodes.xml" value="0.24259259259259258" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/layout/activity_main.xml" value="0.21" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/layout/activity_signin.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/layout/activity_signup.xml" value="0.24259259259259258" />
+        <entry key="..\:/Users/zub93/AndroidStudioProjects/DriveAllNight/app/src/main/res/layout/list_item_episodes.xml" value="0.24259259259259258" />
       </map>
     </option>
   </component>

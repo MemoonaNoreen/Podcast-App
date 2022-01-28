@@ -8,4 +8,6 @@
     <color name="accentDark">#EA3449</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="secondaryText">#bdbdbd</color>
+    <color name="textColor">#616161</color>
 </resources>
