@@ -19,6 +19,7 @@ import com.example.driveallnight.models.RssData;
 import com.prof.rssparser.Article;
 import com.prof.rssparser.Channel;
 import com.prof.rssparser.Image;
+import com.prof.rssparser.ItunesArticleData;
 import com.prof.rssparser.OnTaskCompleted;
 import com.prof.rssparser.Parser;
 
@@ -84,19 +85,14 @@ public class EpisodesActivity extends AppCompatActivity
 
                 for (Article article : articles)
                 {
-                    rssData = new RssData(article.getPubDate(), article.getTitle(), article.getAudio());
+                    ItunesArticleData itunesArticleData = article.getItunesArticleData();
+
+                    rssData = new RssData(article.getPubDate(), article.getTitle(), itunesArticleData.getSummary(),
+                            itunesArticleData.getDuration(), article.getAudio());
                     rssDataArrayList.add(rssData);
 
-                    /*Log.d(TAG, "onTaskCompleted: Title: " + article.getTitle());
-                    Log.d(TAG, "onTaskCompleted: Date: " + article.getPubDate());
-
-                    Log.d(TAG, "onTaskCompleted: Audio: " + article.getAudio());
-                    Log.d(TAG, "onTaskCompleted: Content: " + article.getContent());*/
-
-                    /*ItunesArticleData itunesArticleData = article.getItunesArticleData();
-
                     Log.d(TAG, "onTaskCompleted: Duration: " + itunesArticleData.getDuration());
-                    Log.d(TAG, "onTaskCompleted: Summary: " + itunesArticleData.getSummary());*/
+                    Log.d(TAG, "onTaskCompleted: Summary: " + itunesArticleData.getSummary());
                 }
 
                 runOnUiThread(new Runnable()

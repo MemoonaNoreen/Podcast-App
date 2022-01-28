@@ -48,7 +48,7 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:29.0.4')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-database:19.3.1'
-    implementation 'com.prof.rssparser:rssparser:3.0.0'
+    implementation 'com.prof18.rssparser:rssparser:4.0.2'
     implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
 }
 apply plugin: 'com.google.gms.google-services'

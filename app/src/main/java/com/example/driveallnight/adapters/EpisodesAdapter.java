@@ -41,14 +41,17 @@ public class EpisodesAdapter extends ArrayAdapter<RssData>
 
         TextView txtDay = (TextView) rowView.findViewById(R.id.txtDay);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.txtTitle);
+        TextView txtDescription = (TextView) rowView.findViewById(R.id.txtDescription);
 
         String day = rssDataArrayList.get(position).getDay();
         String title = rssDataArrayList.get(position).getTitle();
+        String description = rssDataArrayList.get(position).getDescription();
 
-        Log.d("TEST", "Text:" + day + title);
+        Log.d("TEST", "Text:" + day + title + description);
 
         txtDay.setText(day);
         txtTitle.setText(title);
+        txtDescription.setText(description);
 
         return rowView;
     }
