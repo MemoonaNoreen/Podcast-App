@@ -3,12 +3,14 @@ package com.example.driveallnight.activities;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.driveallnight.MyPreferences;
 import com.example.driveallnight.R;
 import com.example.driveallnight.databinding.ActivitySigninBinding;
 import com.example.driveallnight.databinding.ActivitySignupBinding;
@@ -26,6 +28,7 @@ public class SigninActivity extends AppCompatActivity
 
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,6 +41,8 @@ public class SigninActivity extends AppCompatActivity
 
         progressDialog = new ProgressDialog(context);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        sharedPreferences = this.getSharedPreferences(MyPreferences.MyPREFERENCES, Context.MODE_PRIVATE);
 
         binding.txtSignup.setOnClickListener(new View.OnClickListener()
         {
@@ -122,6 +127,7 @@ public class SigninActivity extends AppCompatActivity
 
     private void startMainActivity()
     {
+        sharedPreferences.edit().putBoolean(MyPreferences.LOGIN,true).apply();
         Intent intent = new Intent(context, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

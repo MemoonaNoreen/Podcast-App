@@ -16,4 +16,6 @@
     <string name="plus">Drive All Night Plus</string>
     <string name="wills"><![CDATA[Wills & Wants]]></string>
     <string name="episodes">Episodes</string>
+    <string name="left">1 hr 31 min left</string>
+    <string name="duration">3 min</string>
 </resources>
