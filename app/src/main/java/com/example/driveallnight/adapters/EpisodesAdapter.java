@@ -42,17 +42,36 @@ public class EpisodesAdapter extends ArrayAdapter<RssData>
         TextView txtDay = (TextView) rowView.findViewById(R.id.txtDay);
         TextView txtTitle = (TextView) rowView.findViewById(R.id.txtTitle);
         TextView txtDescription = (TextView) rowView.findViewById(R.id.txtDescription);
+        TextView txtDuration = (TextView) rowView.findViewById(R.id.txtDuration);
 
         String day = rssDataArrayList.get(position).getDay();
         String title = rssDataArrayList.get(position).getTitle();
         String description = rssDataArrayList.get(position).getDescription();
-
-        Log.d("TEST", "Text:" + day + title + description);
+        String duration = rssDataArrayList.get(position).getDuration();
+        String totalDuration = durationFormat(duration);
 
         txtDay.setText(day);
         txtTitle.setText(title);
         txtDescription.setText(description);
+        txtDuration.setText(totalDuration);
 
         return rowView;
+    }
+
+    private String durationFormat(String duration)
+    {
+        String[] time = duration.split(":");
+
+        String hour = time[0];
+        String min = time[1];
+        String sec = time[2];
+        String result = "00";
+
+        if (hour.contains("00"))
+            result = min + " min " + sec + " sec";
+        else
+            result = hour + " hour " + min + " min " + sec + " sec";
+
+        return result;
     }
 }
