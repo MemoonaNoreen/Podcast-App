@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.driveallnight.R;
@@ -43,6 +45,9 @@ public class EpisodesAdapter extends ArrayAdapter<RssData>
         TextView txtTitle = (TextView) rowView.findViewById(R.id.txtTitle);
         TextView txtDescription = (TextView) rowView.findViewById(R.id.txtDescription);
         TextView txtDuration = (TextView) rowView.findViewById(R.id.txtDuration);
+        ImageView btnPlay = (ImageView) rowView.findViewById(R.id.btn_play);
+        ImageView btnPause = (ImageView) rowView.findViewById(R.id.btn_pause);
+        LinearLayout laySeekbar = (LinearLayout) rowView.findViewById(R.id.lay_seekbar);
 
         String day = rssDataArrayList.get(position).getDay();
         String title = rssDataArrayList.get(position).getTitle();
@@ -54,6 +59,28 @@ public class EpisodesAdapter extends ArrayAdapter<RssData>
         txtTitle.setText(title);
         txtDescription.setText(description);
         txtDuration.setText(totalDuration);
+
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                btnPause.setVisibility(View.VISIBLE);
+                btnPlay.setVisibility(View.GONE);
+                laySeekbar.setVisibility(View.VISIBLE);
+                txtDuration.setVisibility(View.GONE);
+            }
+        });
+
+        btnPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                btnPause.setVisibility(View.GONE);
+                btnPlay.setVisibility(View.VISIBLE);
+                laySeekbar.setVisibility(View.GONE);
+                txtDuration.setVisibility(View.VISIBLE);
+            }
+        });
 
         return rowView;
     }
@@ -69,6 +96,15 @@ public class EpisodesAdapter extends ArrayAdapter<RssData>
 
         if (hour.contains("00"))
             result = min + " min " + sec + " sec";
+
+        else if (sec.contains("00"))
+        {
+            if (hour.contains("00"))
+                result = min + " min";
+            else
+                result = hour + " hour " + min + " min";
+        }
+
         else
             result = hour + " hour " + min + " min " + sec + " sec";
 

@@ -44,13 +44,12 @@
         android:layout_marginTop="5dp">
 
         <ImageView
+            android:id="@+id/btn_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_play"
-            android:src="@drawable/ic_play"
             android:background="@drawable/circular_bg"
             android:padding="5dp"
-            />
+            android:src="@drawable/ic_play" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -71,7 +70,7 @@
             android:layout_toRightOf="@id/btn_play"
             android:text="@string/duration"
             android:textColor="@color/accent"
-            android:textSize="18dp" />
+            android:textSize="16dp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -79,7 +78,7 @@
             android:orientation="horizontal"
             android:id="@+id/lay_seekbar"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/btn_play"
+            android:layout_toRightOf="@id/btn_pause"
             android:visibility="gone"
             >
 
@@ -87,7 +86,6 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/seekbar"
-                android:layout_toRightOf="@id/btn_play"
                 android:max="150"
                 android:progress="50"
                 />
