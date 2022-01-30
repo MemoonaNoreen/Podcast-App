@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity
     private Context context = MainActivity.this;
 
     private ActivityMainBinding binding;
-    RssData rssData;
-    ArrayList<RssData>rssDataArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -46,21 +44,26 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                String url = "https://feeds.soundcloud.com/users/soundcloud:users:561213786/sounds.rss";
+                String url = "https://feeds.soundcloud.com/users/soundcloud:users:209070702/sounds.rss";
                 startEpisodesActivity(url);
             }
         });
 
         binding.lyTour.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View view)
+            {
+                String url = "https://feeds.soundcloud.com/users/soundcloud:users:303891876/sounds.rss";
+                startEpisodesActivity(url);
             }
         });
 
         binding.lyShutup.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
+                String url = "https://feeds.soundcloud.com/users/soundcloud:users:561213786/sounds.rss";
+                startEpisodesActivity(url);
 
             }
         });
