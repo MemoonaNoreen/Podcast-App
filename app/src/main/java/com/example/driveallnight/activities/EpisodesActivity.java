@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.driveallnight.R;
 import com.example.driveallnight.adapters.EpisodesAdapter;
+import com.example.driveallnight.adapters.EpisodesRecyclerAdapter;
 import com.example.driveallnight.databinding.ActivityEpisodesBinding;
 import com.example.driveallnight.models.RssData;
 import com.prof.rssparser.Article;
@@ -37,6 +38,8 @@ public class EpisodesActivity extends AppCompatActivity
     RssData rssData;
     EpisodesAdapter episodesAdapter;
     ListView listView;
+    RecyclerView recyclerView;
+    EpisodesRecyclerAdapter recyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,12 +51,11 @@ public class EpisodesActivity extends AppCompatActivity
         String url = bundle.getString("URL");
 
         progressDialog = new ProgressDialog(context);
-        listView = (ListView) findViewById(R.id.list_episodes);
+        listView = (ListView) findViewById(R.id.lst_episodes);
+        /*recyclerView = (RecyclerView) findViewById(R.id.rv_episodes);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));*/
 
         fetchRSSFeeds(url);
-
-
-
     }
 
     private void fetchRSSFeeds(String URL)
@@ -101,6 +103,8 @@ public class EpisodesActivity extends AppCompatActivity
                     public void run() {
                         episodesAdapter = new EpisodesAdapter(EpisodesActivity.this, rssDataArrayList);
                         listView.setAdapter(episodesAdapter);
+                        /*recyclerAdapter = new EpisodesRecyclerAdapter(EpisodesActivity.this ,rssDataArrayList);
+                        recyclerView.setAdapter(recyclerAdapter);*/
                         Log.d(TAG, "DataList: " + rssDataArrayList.size());
                     }
                 });
@@ -114,4 +118,12 @@ public class EpisodesActivity extends AppCompatActivity
         });
         parser.execute(URL);
     }
+
+   /* @Override
+    protected void onPause()
+    {
+        super.onPause();
+        recyclerAdapter.stopPlayer();
+    }*/
 }
+

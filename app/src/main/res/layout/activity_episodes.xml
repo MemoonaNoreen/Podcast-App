@@ -30,7 +30,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/list_episodes"
+        android:id="@+id/lst_episodes"
         android:layout_below="@id/ly_margin"
         android:layout_margin="10dp"
         android:scrollbars="vertical"
@@ -38,5 +38,15 @@
         tools:listitem="@layout/list_item_episodes"
         />
 
-
+    <!--<androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rv_episodes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ly_margin"
+        android:layout_margin="10dp"
+        android:scrollbars="vertical"
+        android:listSelector="@android:color/transparent"
+        tools:listitem="@layout/list_item_episodes"
+        />-->
 </RelativeLayout>
